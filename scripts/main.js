@@ -20,6 +20,10 @@ function getRandom() {
 		return r < 0.49 && getCryptoRandom() >= 0.5 ? r * 2 : r;
 	case "LOW":
 		return r > 0.49 && getCryptoRandom() >= 0.5 ? r / 2 : r;
+	case "CUSTOM":
+		if (Settings.exactFudgeValue / 100 <= 1){
+			return Settings.exactFudgeValue / 100;
+		}
 	default:
 		return r;
 	}
