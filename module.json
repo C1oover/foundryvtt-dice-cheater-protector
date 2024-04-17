@@ -2,7 +2,7 @@
 	"id": "dice-rng-protector",
 	"title": "Dice RNG Protector",
 	"description": "Improves RNG and provides protection against common ways of cheating.",
-	"version": "0.2.3",
+	"version": "0.2.4",
 	"minimumCoreVersion": "0.6.5",
 	"compatibleCoreVersion": "11",
 	"compatibility": {
