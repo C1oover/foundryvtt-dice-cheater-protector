@@ -35,12 +35,12 @@ Hooks.once('ready', () => {
 	// Use getRandom() or getCryptoRandom() based on settings
 	CONFIG.Dice.randomUniform = (Settings.getEnableFudgeDice()) ? getRandom : getCryptoRandom;
 	// Freeze the Dice class for players to avoid modification (harder to cheat)
-	if (!Settings.getOnlyForPlayer() || !game.user.isGM) {
+	if (!Settings.getOnlyForPlayer() || !game.user.hasRole("TRUSTED",1)) {
 		Object.freeze(CONFIG.Dice);
 	}
 });
 Hooks.on('renderSidebarTab', (app, html, data) => {
-	if (!game.user.hasPermission("TRUSTED") || !Settings.getEnableFudgeDice()) return;
+	if (!game.user.hasRole("TRUSTED",1) || !Settings.getEnableFudgeDice()) return;
 	let $chatForm = html.find('#chat-form');
 	const template = 'modules/dice-rng-protector/templates/tray.html';
 	const dataObject = {};
