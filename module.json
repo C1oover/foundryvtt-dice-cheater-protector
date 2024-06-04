@@ -8,12 +8,9 @@
 	"compatibility": {
 		"minimum": "0.6.5",
 		"verified": 11.299,
-		"maximum": 11
+		"maximum": 12
 	},
 	"authors": [
-		{
-			"name": "C1oover"
-		},
 		{
 			"name": "C1oover"
 		}
