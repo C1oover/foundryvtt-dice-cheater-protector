@@ -5,6 +5,7 @@
 		"Maximal": "Máx",
 		"Low": "Bajo",
 		"High": "Alto",
+		"Custom": "Custom",
 		"settings": {
 			"usecrypto": {
 				"name": "Mejor RNG",
