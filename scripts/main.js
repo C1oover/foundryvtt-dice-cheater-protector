@@ -12,8 +12,8 @@ function getRandom() {
 	case "LOW":
 		return r < 0.49 && MersenneTwister.random() >= 0.5 ? r * 2 : r;
 	case "CUSTOM":
-		if (Settings.exactFudgeValue / 100 <= 1){
-			return Settings.exactFudgeValue / 100;
+		if (0 < document.getElementById('dcp-dice-custom-number').value < 100){
+			return document.getElementById('dcp-dice-custom-number').value / 100 - 0.0001;
 		}
 	default:
 		return r;
